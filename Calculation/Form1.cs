@@ -15,7 +15,7 @@ namespace Calculation
         private void btnNumber_Click(object sender, EventArgs e)
         {
             Button btn = sender as Button;
-            str += btn.Text;
+            str += btn.Text;  
 
             if (btn != null)
             {
@@ -31,6 +31,7 @@ namespace Calculation
             {
                 var result = new DataTable().Compute(str, null);
                 txtResult.Text = result.ToString();
+                str = string.Empty;
             }
             catch
             {
